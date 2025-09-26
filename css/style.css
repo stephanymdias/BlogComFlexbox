@@ -1,17 +1,11 @@
-/* 1. RESET GLOBAL */
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-/* 2. DEFINIÇÃO DAS CONFIGURAÇÕES GLOBAIS */
-
 body {
     font-family: 'lato', sans-serif;
-    background-image: url(/assets/laptop2.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -22,10 +16,9 @@ body {
 
 }
 
-/* 3. O COMPONENTE DO POST - O FOCO DO NOSSO ESTUDO */
-
 .post-card {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     gap: 20px;
     width: 100%;
@@ -36,11 +29,23 @@ body {
     overflow: hidden;
 }
 
-/* 4. ESTILIZAÇÃO DOS ELEMENTOS FILHOS DO CSS FLEXBOX */
-
-.post-image {
+.post-card img {
     width: 200px;
     height: 200px;
     object-fit: cover;
     
 }
+
+@media (max-width: 500px){
+    .post-card{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .post-card img{
+        width: 100%;
+        height: auto;
+        border-radius: 14px 14px 0 0;
+    }
+}
+
